@@ -1,0 +1,145 @@
+<!doctype html>
+    <html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/bootstrap.css"> 
+    </head>
+    <body class="fondo">
+        <h1 class="titulo">Calculadora de Resistencias</h1>
+        <h1 class="parrafo">Convertir de código de colores a valor en Ohms</h1>
+        
+        <div class="container-fluid" id="contenedor">
+        
+            <script type ="text/javascript" src="js/app.js"></script>
+            
+            <!--Banda 1-->
+            <div class="row" id="banda-color1">
+                <div class="columnaColor" id="paleta-color1">
+                    <h1 class="tit_celda">1er Color</h1>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Color
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <img src="imagenes/colores/negro.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="0">0</img>
+                            <img src="imagenes/colores/marron.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="1">1</img>
+                            <img src="imagenes/colores/rojo.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="2">2</img>
+                            <img src="imagenes/colores/naranja.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="3">3</img>
+                            <img src="imagenes/colores/amarillo.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="4">4</img>
+                            <img src="imagenes/colores/verde.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="5">5</img>
+                            <img src="imagenes/colores/azul.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="6">6</img>
+                            <img src="imagenes/colores/violeta.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="7">7</img>
+                            <img src="imagenes/colores/gris.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="8">8</img>
+                            <img src="imagenes/colores/blanco.png" onclick="seleccionarColor1(this)" class="paleta-color" alt="Responsive image" title="9">9</img>
+                        </div>
+                    </div>   
+                </div>
+                <div class="columnaImagen" id="seleccion-color1">
+                    <img src="imagenes/resistencias/cabeza-negro.png" class="rounded mx-auto d-block" alt="Responsive image"></img>
+                </div>
+                <div class="columnaCalcular" id="nodo-calculo">
+                    <button class="btn btn-outline-success" onclick="calcular4bandas()" type="submit">Calcular</button>
+                    <label class="labelito" disabled="True">
+                        Valor de resistencia
+                    </label>
+                </div>
+            </div>
+
+             <!--Banda 2-->
+             <div class="row" id="banda-color2">
+                <div class="columnaColor" id="paleta-color2">
+                    <h1 class="tit_celda"1>2da Color</h1>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Color
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <img src="imagenes/colores/negro.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="0">0</img>
+                            <img src="imagenes/colores/marron.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="1">1</img>
+                            <img src="imagenes/colores/rojo.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="2">2</img>
+                            <img src="imagenes/colores/naranja.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="3">3</img>
+                            <img src="imagenes/colores/amarillo.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="4">4</img>
+                            <img src="imagenes/colores/verde.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="5">5</img>
+                            <img src="imagenes/colores/azul.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="6">6</img>
+                            <img src="imagenes/colores/violeta.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="7">7</img>
+                            <img src="imagenes/colores/gris.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="8">8</img>
+                            <img src="imagenes/colores/blanco.png" onclick="seleccionarColor2(this)" class="paleta-color" alt="Responsive image" title="9">9</img>
+                        </div>
+                      </div>
+                </div>
+                <div class="columnaImagen" id="seleccion-color2">
+                    <img src="imagenes/resistencias/medio-negro.png" class="rounded mx-auto d-block" alt="Responsive image">
+                </div>
+            </div>
+
+            
+             <!--Banda 3-->
+             <div class="row" id="banda-color3">
+                <div class="columnaColor" id="paleta-color3">
+                    <h1 class="tit_celda">Multiplicador</h1>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Color
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <img src="imagenes/colores/negro.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x1Ω">x1Ω</img>
+                            <img src="imagenes/colores/marron.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x10Ω">x10Ω</img>
+                            <img src="imagenes/colores/rojo.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x100Ω">x100Ω</img>
+                            <img src="imagenes/colores/naranja.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x1KΩ">x1KΩ</img>
+                            <img src="imagenes/colores/amarillo.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x10KΩ">x10KΩ</img>
+                            <img src="imagenes/colores/verde.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x100KΩ">x100KΩ</img>
+                            <img src="imagenes/colores/azul.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x1MΩ">x1MΩ</img>
+                            <img src="imagenes/colores/violeta.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x10MΩ">x10MΩ</img>
+                            <img src="imagenes/colores/gris.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x100MΩ">x100MΩ</img>
+                            <img src="imagenes/colores/blanco.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x1GΩ">x1GΩ</img>
+                            <img src="imagenes/colores/plata.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x0.01Ω">x0.01Ω</img>
+                            <img src="imagenes/colores/oro.png" onclick="seleccionarMultiplicador(this)" class="paleta-color" alt="Responsive image" title="x0.1Ω">x0.1Ω</img>
+                        </div>
+                      </div>
+                </div>
+                <div class="columnaImagen" id="seleccion-color3">
+                    <img src="imagenes/resistencias/medio-negro.png" class="rounded mx-auto d-block" alt="Responsive image">
+                </div>
+            </div>
+
+
+            <!--Banda 4-->
+            <div class="row" id="banda-color4">
+                <div class="columnaColor" id="paleta-color4">
+                    <h1 class="tit_celda">Tolerancia</h1>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Color
+                        </button>
+                        <div class="dropdown-menu">
+                            <img src="imagenes/colores/marron.png" onclick="seleccionarTolerancia(this)" class="paleta-color" alt="Responsive image" title="±1%">±1%</img>
+                            <img src="imagenes/colores/rojo.png" onclick="seleccionarTolerancia(this)" class="paleta-color" alt="Responsive image" title="±2%">±2%</img>
+                            <img src="imagenes/colores/verde.png" onclick="seleccionarTolerancia(this)" class="paleta-color" alt="Responsive image" title="±0.5%">±0.5%</img>
+                            <img src="imagenes/colores/azul.png" onclick="seleccionarTolerancia(this)" class="paleta-color" alt="Responsive image" title="±0.25%">±0.25%</img>
+                            <img src="imagenes/colores/violeta.png" onclick="seleccionarTolerancia(this)" class="paleta-color" alt="Responsive image" title="±0.1%">±0.1%</img>
+                            <img src="imagenes/colores/gris.png" onclick="seleccionarTolerancia(this)" class="paleta-color" alt="Responsive image" title="±0.05%">±0.05%</img>
+                            <img src="imagenes/colores/plata.png" onclick="seleccionarTolerancia(this)" class="paleta-color" alt="Responsive image" title="±5%">±5%</img>
+                            <img src="imagenes/colores/oro.png" onclick="seleccionarTolerancia(this)" class="paleta-color" alt="Responsive image" title="±10%">±10%</img>
+                        </div>
+                      </div>
+                </div>
+                <div class="columnaImagen" id="seleccion-color4">
+                    <img src="imagenes/resistencias/cola-oro.png" class="rounded mx-auto d-block" alt="Responsive image">
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

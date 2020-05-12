@@ -1,18 +1,107 @@
 <!doctype html>
-<html>
+<html lang="es">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/app.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Proyecto 1</title>
   </head>
   <body>
-    <h1>Proyecto 1</h1>
+    <ul class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ≡
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Calculadora de Resistencias</a>
+                      <a class="dropdown-item" href="color4bandas.html">Color a Valor</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="prueba.html">Contactenos!</a>
+                  </div>
+              </li>
+          </ul>
 
-    <!-- JavaScript -->
-    <script src="js/app.js"></script>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </ul>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Principal</li>
+        </ol>
+      </nav>
+    <h1 class="mx-3 my-3">Calculadora de Resistencias</h1>
+    <h3 class="mx-3 my-3">Descripción</h3>
+    <h7 class="mx-3 my-3">bla bla bla...</h7>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm">
+            <h6 class=""> Selección de Bandas </h6>
+          </div>
+          <div class="col-sm card align-items-center">
+            <form class="form-inline my-3 my-lg-3">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">4</button>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">5</button>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">6</button>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm card align-items-center">
+              Color a Valor
+          </div>
+          <div class="col-sm card align-items-center">
+              Valor a Color
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm card align-items-center">
+              <!--
+                Aca va la resistencia con las paletas de colores
+              -->
+          </div>
+          <div class="col-sm card align-items-center">
+              <!--
+                Aca va 
+              -->
+              <div class="row">
+                <form class="form-inline my-3 my-lg-3">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Valor" aria-label="Valor">
+                  <h6 class="mx-3">Ohm</h6>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Unidad
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Ohm</a>
+                      <a class="dropdown-item" href="#">KOhm</a>
+                    </div>
+                     
+                  </div>
+                </form>
+              </div>
+            
+              <div class="text-center">
+                <img src="imagenes/resistencia1.png" class="rounded" alt="Responsive image"> 
+              </div>
+              
+          </div>
+        </div>
+
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
