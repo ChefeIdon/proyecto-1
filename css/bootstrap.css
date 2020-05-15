@@ -2594,22 +2594,22 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary {
-  color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  color: #838485;
+  background-color: #212529;
+  /*border-color: #6c757d;*/
 }
 
 .btn-secondary:hover {
-  color: #fff;
-  background-color: #5a6268;
-  border-color: #545b62;
+  color: #4a9c51;
+ /* background-color: #5a6268;
+  /*border-color: #545b62;*/
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
-  color: #fff;
-  background-color: #5a6268;
-  border-color: #545b62;
-  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+  color: rgb(228, 225, 225);
+  background-color: rgb(18, 66, 18);
+  /*border-color: #545b62;*/
+  box-shadow: 0 0 0 1px rgb(18, 66, 18);
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {

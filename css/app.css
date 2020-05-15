@@ -1,3 +1,102 @@
+/* Generales */
+.logo{
+    text-align: center;
+}
+.logo70x70{
+    margin-bottom: 10px;
+}
+.logo25x25:hover{
+    border-color:#4a9c51;
+    box-shadow: 0 0 0 0.2rem #4a9c51;
+}
+.boton-bandas{
+    margin-bottom: 10px;
+}
+.botones{
+    width: 30%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    text-align: center; 
+    font-style: italic;  
+    color: #838485;
+    background-clip: padding-box;
+    border-radius: 1rem;
+}
+.botones:active{
+    border-color: #0062cc;
+    background-color: rgb(18, 66, 18);
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+.botones:focus{
+    border-color: #0062cc;
+    background-color: rgb(18, 66, 18);
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+.boton-barra{
+    background-color:transparent;
+    border: none;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 1rem;
+    font-style: italic;  
+    color: #838485;
+}
+.boton-barra:hover{
+    color: #4a9c51;
+    text-decoration:none;
+}
+.fondo{
+    background-color: #0d0d0f;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: normal;
+    font-style: italic;
+    font-family:'Klavika';
+    color: #838485;
+    font-style: italic;
+}
+.barra{
+    position: relative;
+    height: 40px;
+    background-color: #131416;
+    border: 2px solid rgb(34, 32, 32);;
+    border-radius: 2rem;
+}
+table{
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+}
+body{
+    margin-top: 20%;
+}
+.link{
+    color: #838485;
+    font-weight: bold;
+
+}
+
+/*Decoracion del breadcrumb-item*/
+@media (prefers-reduced-motion:reduce){
+    .link{
+        transition:none
+    }
+}
+.link:hover{
+    color: #4a9c51;
+    text-decoration:none
+}
+
+/*Fuente importada*/
+@font-face{
+    font-family: 'Klavika';
+    src: local('fuentes/Klavica-Regular.otf'),
+         local('fuentes/Klavica-RegularItalic.otf'),
+}
+
+
 /* Texto */
 .titulo{
     font-size: 35px;
@@ -19,7 +118,8 @@
     width: 10%;
 }
 
-/* Tabla para el calculo del valor */
+/* Color a valor */
+/* Tabla para el calculo del valor*/
 .descripcion_paleta{
     font-weight: normal;
     font-size: 12px;
@@ -36,11 +136,11 @@
     margin-right: 20%;
 }
 .columnaCalcular{
-    position: relative;
-    margin-left: 10%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 80%;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 1px;
+    height: 37px;
 }
 .columnaColor{
     width: 60%;
@@ -61,7 +161,7 @@
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-style: italic;
-    text-align: right;   
+    text-align: center;   
     color: #838485;
     background-color: rgb(34, 32, 32);
     background-clip: padding-box;
@@ -95,99 +195,3 @@
     font-weight: normal;
     font-style: italic;
 }
-
-/* Generales */
-.logo{
-    text-align: center;
-}
-.boton-bandas{
-    margin-bottom: 10px;
-}
-.botones{
-    width: 30%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    text-align: center; 
-    font-style: italic;  
-    color: #838485;
-    background-clip: padding-box;
-    border-radius: 1rem;
-}
-.botones:active{
-    border-color: #0062cc;
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-}
-.boton-barra{
-        margin-top: auto;
-        width: 30%;
-        padding: 0.375rem 0.75rem;
-        font-size: 1rem;
-        text-align: center; 
-        background-color: transparent;
-        font-style: italic;  
-        color: #838485;
-        background-clip: padding-box;
-}
-.boton-barra:active{
-    border-color: #0062cc;
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-}
-.boton-barra:hover{
-    color: #4a9c51;
-    text-decoration:none
-}
-.fondo{
-    background-color: #0d0d0f;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-weight: normal;
-    font-style: italic;
-    font-family:'Klavika';
-    color: #838485;
-    font-style: italic;
-}
-.barra{
-    width: 100%;
-    height: 30px;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #131416;
-    border: 2px solid rgb(34, 32, 32);;
-    border-radius: 3rem;
-}
-table{
-    font-weight: normal;
-    font-size: 12px;
-    text-align: center;
-}
-body{
-    margin-top: 20%;
-}
-.link{
-    color: #838485;
-    font-weight: bold;
-
-}
-
-/*Decoracion del breadcrumb-item*/
-@media (prefers-reduced-motion:reduce){
-    .link{
-        transition:none
-    }
-}
-.link:hover{
-    color: #4a9c51;
-    text-decoration:none
-}
-
-
-/*Fuente importada*/
-@font-face {
-    font-family: 'Klavika';
-    src: local('fuentes/Klavica-Regular.otf'),
-         local('fuentes/Klavica-RegularItalic.otf'),
-  }
