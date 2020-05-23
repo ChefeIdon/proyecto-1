@@ -12,270 +12,71 @@
         
         
     </head>
+
+    <script type ="text/javascript" src="js/app.js"></script>
+
     <body class="fondo">
+        <!--Barra superior-->
+        <div class = "barra fixed-top" id="barra">
+            <a class=" boton-barra" href="index.html" role="button">
+                <button class=" boton-barra">
+                    <img class="rounded logo25x25" src="imagenes/logoMin25x25.png"></img>
+                </button>
+            </a>
+            <a class=" boton-barra" href="valoracolor.html" role="button">
+                <button class=" boton-barra">
+                    De Valor a Colores
+                </button>
+            </a>
+            <a class=" boton-barra" href="coloravalor.html" role="button">
+                <button class="boton-barra">
+                    De Colores a Valor
+                </button>
+            </a>
+        </div>
+
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a class="link" href="index.html">Principal</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Calculadora Color a Valor (4 bandas)</li>
+                <li class="breadcrumb-item active" aria-current="page">Principal</li>
             </ol>
         </nav>
 
-        <div class="logo">
-            <img class="logo70x70" src="imagenes/LogoMin70x70.png"></img>
-            <h1 class="titulo">Mr. Omegoo</h1>
-            <h1 class="subtitulo">Ω Calculadora de Color a Valor</h1>
-            <h1 class="parrafo"> Esta herramienta se utiliza para decodificar información para las resistencias con conductores axiales en una banda de colores.</h1>
-            <h1 class="parrafo"> Seleccione la cantidad de bandas y, luego, sus colores para determinar el valor y la tolerancia de las resistencias.</h1>
-        </div>
-        
-        <div class="content" id="contenedor">
-        
-            <script type ="text/javascript" src="js/app.js"></script>
-            
-            <!-- Panel seleccionador de número de bandas -->
-            <div class="fila-cantidad-bandas" id="numero-bandas">
-                <h1 class="titulo-numero-bandas">Cantidad de Bandas</h1>
-                <a class="btn botones boton-bandas" href="index.html" role="button">
-                    4 bandas
-                </a>
-                <a class="btn botones boton-bandas" href="color5bandas.html" role="button">
-                    5 bandas
-                </a>
-                <a class="btn botones boton-bandas" href="color6bandas.html" role="button">
-                    6 bandas
-                </a>
+        <div class="bandas">
+            <div class="logo">
+                <img class="max-width logo-ppal" src="imagenes/LogoMin.png"></img>
             </div>
-
-            <!--Banda 1-->
-            <div class="bandas" id="banda-color1">
-                <div class="columnaColor" id="paleta-color1">
-                    <h1 class="titulo_paleta">1er Color</h1>
-                    <table class="paleta-color">
-                        <tr class="numeros">
-                            <td>
-                                <img src="imagenes/colores/negro.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Negro"></img>
-                                <h1 class="descripcion_paleta">0</h1>
-                            </td>
-                            <td>
-                                <img src="imagenes/colores/marron.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Marrón"></img>
-                                <h1 class="descripcion_paleta">1</h1>
-                            </td>
-                            <td>
-                                <img src="imagenes/colores/rojo.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Rojo"></img>
-                                <h1 class="descripcion_paleta">2</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/naranja.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Naranja"></img>
-                                <h1 class="descripcion_paleta">3</h1>
-                            </td>
-                            <td>
-                                <img src="imagenes/colores/amarillo.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Amarillo"></img>
-                                <h1 class="descripcion_paleta">4</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/verde.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Verde"></img>
-                                <h1 class="descripcion_paleta">5</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/azul.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Azul"></img>
-                                <h1 class="descripcion_paleta">6</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/violeta.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Violeta"></img>
-                                <h1 class="descripcion_paleta">7</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/gris.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Gris"></img>
-                                <h1 class="descripcion_paleta">8</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/blanco.png" onclick="seleccionarColor1(this,4)" class="paleta-color" alt="Responsive image" title="Blanco"></img>
-                                <h1 class="descripcion_paleta">9</h1>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="columnaImagen" id="seleccion-color1">
-                    <img src="imagenes/resistencias/cabeza-negro.png" class="rounded mx-auto d-block" alt="Responsive image"></img>
-                </div>
+            <div class="historia">
+                <h1 class="titulo-ppal">Mr. Omegoo</h1>
+                <h1 class="subtitulo">Ω Calculadora de Resistencias</h1>
+                <h1 class="parrafo"> Esta herramienta se utiliza para decodificar información para las resistencias con conductores axiales en una banda de colores.</h1>
+                <h1 class="parrafo"> En ella encontrará las opciones de transformar un código de colores determinado en su valor correspondiente de resistencia, asi como tambien, dado un valor determinado de resistencia, poder encontrar la codificación de colores correspondiente.</h1>
             </div>
-            
-             <!--Banda 2-->
-             <div class="bandas" id="banda-color2">
-                <div class="columnaColor" id="paleta-color2">
-                    <h1 class="titulo_paleta">2do Color</h1>
-                    <table class="paleta-color">
-                        <tr class="numeros">
-                            <td >
-                                <img src="imagenes/colores/negro.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Negro"></img>
-                                <h1 class="descripcion_paleta">0</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/marron.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Marrón"></img>
-                                <h1 class="descripcion_paleta">1</h1>
-                            </td>
-                            <td>
-                                <img src="imagenes/colores/rojo.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Rojo"></img>
-                                <h1 class="descripcion_paleta">2</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/naranja.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Naranja"></img>
-                                <h1 class="descripcion_paleta">3</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/amarillo.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Amarillo"></img>
-                                <h1 class="descripcion_paleta">4</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/verde.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Verde"></img>
-                                <h1 class="descripcion_paleta">5</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/azul.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Azul"></img>
-                                <h1 class="descripcion_paleta">6</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/violeta.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Violeta"></img>
-                                <h1 class="descripcion_paleta">7</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/gris.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Gris"></img>
-                                <h1 class="descripcion_paleta">8</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/blanco.png" onclick="seleccionarColor2(this,4,1)" alt="Responsive image" title="Blanco"></img>
-                                <h1 class="descripcion_paleta">9</h1>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="columnaImagen" id="seleccion-color2">
-                    <img src="imagenes/resistencias/medio-negro.png" class="rounded mx-auto d-block" alt="Responsive image">
-                </div>
-            </div>
-
-            
-             <!--Banda 3-->
-             <div class="bandas" id="banda-color3">
-                <div class="columnaColor" id="paleta-color3">
-                    <h1 class="titulo_paleta">Multiplicador</h1>
-                    <table class="paleta-color">
-                        <tr class="numeros">
-                            <td >
-                                <img src="imagenes/colores/negro.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Negro"></img>
-                                <h1 class="descripcion_paleta">x1Ω</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/marron.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Marrón"></img>
-                                <h1 class="descripcion_paleta">x10Ω</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/rojo.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Rojo"></img>
-                                <h1 class="descripcion_paleta">x100Ω</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/naranja.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Naranja"></img>   
-                                <h1 class="descripcion_paleta">x1KΩ</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/amarillo.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Amarillo"></img>
-                                <h1 class="descripcion_paleta">x1OKΩ</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/verde.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Verde"></img>
-                                <h1 class="descripcion_paleta">x100KΩ</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/azul.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Azul"></img>
-                                <h1 class="descripcion_paleta">x1MΩ</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/violeta.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Violeta"></img>
-                                <h1 class="descripcion_paleta">x10MΩ</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/gris.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Gris"></img>
-                                <h1 class="descripcion_paleta">x100MΩ</h1>
-                            </td>
-                            <td>
-                                <img src="imagenes/colores/blanco.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Blanco"></img>
-                                <h1 class="descripcion_paleta">x1GΩ</h1>
-                            </td>
-                            <td>
-                                <img src="imagenes/colores/plata.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Plata"></img>
-                                <h1 class="descripcion_paleta">x0.01Ω</h1>
-                            </td>
-                            <td>
-                                <img src="imagenes/colores/oro.png" onclick="seleccionarMultiplicador(this,4,2)" class="paleta-color" alt="Responsive image" title="Oro"></img>
-                                <h1 class="descripcion_paleta">x0.1Ω</h1>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="columnaImagen" id="seleccion-multiplicador">
-                    <img src="imagenes/resistencias/medio-negro.png" class="rounded mx-auto d-block" alt="Responsive image">
-                </div>
-            </div>
-
-
-            <!--Banda 4-->
-            <div class="bandas" id="banda-color4">
-                <div class="columnaColor" id="paleta-color4">
-                    <h1 class="titulo_paleta">Tolerancia</h1>
-                    <table class="paleta-color">
-                        <tr class="numeros">
-                            <td >
-                                <img src="imagenes/colores/marron.png" onclick="seleccionarTolerancia(this,4)" class="paleta-color" alt="Responsive image" title="Marrón"></img>
-                                <h1 class="descripcion_paleta">±1%</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/rojo.png" onclick="seleccionarTolerancia(this,4)" class="paleta-color" alt="Responsive image" title="Rojo"></img>
-                                <h1 class="descripcion_paleta">±2%</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/verde.png" onclick="seleccionarTolerancia(this,4)" class="paleta-color" alt="Responsive image" title="Verde"></img>
-                                <h1 class="descripcion_paleta">±0.5%</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/azul.png" onclick="seleccionarTolerancia(this,4)" class="paleta-color" alt="Responsive image" title="Azul"></img>
-                                <h1 class="descripcion_paleta">±0.25%</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/violeta.png" onclick="seleccionarTolerancia(this,4)" class="paleta-color" alt="Responsive image" title="Violeta"></img>
-                                <h1 class="descripcion_paleta">±0.1%</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/gris.png" onclick="seleccionarTolerancia(this,4)" class="paleta-color" alt="Responsive image" title="Gris"></img>
-                                <h1 class="descripcion_paleta">±0.05%</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/oro.png" onclick="seleccionarTolerancia(this,4)" class="paleta-color" alt="Responsive image" title="Oro"></img>
-                                <h1 class="descripcion_paleta">±5%</h1>
-                            </td>
-                            <td >
-                                <img src="imagenes/colores/plata.png" onclick="seleccionarTolerancia(this,4)" class="paleta-color" alt="Responsive image" title="Plata"></img>
-                                <h1 class="descripcion_paleta">±10%</h1>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="columnaImagen" id="seleccion-tolerancia">
-                    <img src="imagenes/resistencias/cola-plata.png" class="rounded mx-auto d-block" alt="Responsive image">
-                </div>
-            </div>
-
         </div>
 
-        <!-- Calcular -->
-        <div class="columnaCalcular fixed-bottom" id="nodo-calculo">
-            <label class="etiqueta-resultado" disabled="True">
-                0Ω Tolerancia:±10%
-            </label>
+        <div class="bandas">
+            <div class="logo">
+                <a href="valoracolor.html" role="button">
+                    <img class="max-width logos-inicio" src="imagenes/val a col.png"></img>
+                </a>
+            </div>
+            <div class="historia-sec">
+                <h1 class="subtitulo">Calcular los colores a partir de un valor</h1>
+                <h1 class="parrafo"> Esta función permite determinar el código de colores correspondiente a un cierto valor de resistencia ingresado.</h1>
+                <h1 class="parrafo"> Indique el valor de resistencia deseado, su escala, la tolerancia deseada y su valor de PPM (en caso de ser una resistencia de 6 bandas).</h1>
+            </div>
         </div>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    </body>
+        <div class="bandas">
+            <div class="historia-sec">
+                <h1 class="subtitulo-der">Calcular el valor a partir de un código de colores</h1>
+                <h1 class="parrafo-der"> Esta función permite seleccionar una codificación de colores determinada para luego calcular su valor de resistencia.</h1>
+                <h1 class="parrafo-der"> Seleccione la cantidad de bandas y, luego, sus colores para determinar el valor y la tolerancia de las resistencias.</h1>
+            </div>
+            <div class="logo">
+                <a href="coloravalor.html" role="button">
+                    <img class="max-width logos-inicio" src="imagenes/col a val.png"></img>
+                </a>
+            </div>
+        </div>
+  </body>
 </html>

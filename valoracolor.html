@@ -1,0 +1,126 @@
+<!doctype html>
+  <html lang="es">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+      <link rel="stylesheet" href="css/app.css"> 
+      <link rel="stylesheet" href="css/bootstrap.css">
+      
+      <!--Barra superior-->
+      <div class = "barra fixed-top" id="barra">
+        <a class="boton-barra" href="index.html" role="button">
+            <button class="boton-barra">
+                <img class="rounded logo25x25" src="imagenes/logoMin25x25.png"></img>
+            </button>
+        </a>
+        <a class="boton-barra" href="valoracolor.html" role="button">
+            <button class="boton-barra">
+                De Valor a Colores
+            </button>
+        </a>
+        <a class="boton-barra" href="coloravalor.html" role="button">
+            <button class="boton-barra">
+                De Colores a Valor
+            </button>
+        </a>
+      </div>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="link" href="index.html">Principal</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Calculadora de Valor a Color</li>
+        </ol>
+      </nav>
+
+      <div class="logo-sec">
+          <img class="logo70x70" src="imagenes/LogoMin70x70.png"></img>
+          <h1 class="titulo">Mr. Omegoo</h1>
+          <h1 class="subtitulo">Ω Calculadora de Valor a Color</h1>
+          <h1 class="parrafo"> Esta función permite seleccionar una codificación de colores determinada para luego calcular su valor de resistencia.</h1>
+          <h1 class="parrafo"> Seleccione la cantidad de bandas y, luego, sus colores para determinar el valor y la tolerancia de las resistencias.</h1>
+      </div>
+      
+    </head>
+
+    <script type ="text/javascript" src="js/app.js"></script>
+
+    <body class="fondo"> 
+        <div class="bandas" id="contenedor">
+
+            <div class="columnaIngresoDatos" id="ingreso-datos">
+                <h1 class="titulo-input">Valor de Resistencia</h1>
+                <div class="entrada">
+                    <input type="search" class="input-resistencia" oninput="chequearTeclaIngreso(this)" placeholder="Ω" aria-label="Input group example" aria-describedby="btnGroupAddon" title="Ingrese el valor de la resistencia" id="input-numero">
+                    <select class="custom-select unidad" id="seleccion-multiplicador" title="Multiplicador">
+                      <option value="1"  class="btn btn-secondary">Ω</option>
+                      <option value="1000" class="btn btn-secondary">KΩ</option>
+                      <option value="1000000" class="btn btn-secondary">MΩ</option>
+                      <option value="1000000000" class="btn btn-secondary">GΩ</option>
+                    </select>
+                </div>
+                <div class="bandas">
+                    <div class="selectores">
+                        <h1 class="titulo-input">Valor de Tolerancia</h1>
+                        <select class="custom-select tolerancia" id="seleccion-tolerancia" title="Tolerancia">
+                            <option value="0.05" class="btn btn-secondary">±0.05%</option>
+                            <option value="0.1" class="btn btn-secondary">±0.1%</option>
+                            <option value="0.25" class="btn btn-secondary">±0.25%</option>
+                            <option value="0.5" class="btn btn-secondary">±0.5%</option>
+                            <option value="1"  class="btn btn-secondary">±1%</option>
+                            <option value="2" class="btn btn-secondary">±2%</option>
+                            <option value="5" class="btn btn-secondary">±5%</option>
+                            <option value="10" class="btn btn-secondary">±10%</option>
+                        </select>
+                    </div>
+                    <div class="selectores">
+                        <h1 class="titulo-input">Valor de PPM (6 Bandas)</h1>
+                        <select class="custom-select ppm" id="seleccion-ppm" title="PPM">
+                            <option value="0"  class="btn btn-secondary">0</option>
+                            <option value="5" class="btn btn-secondary">5</option>
+                            <option value="10" class="btn btn-secondary">10</option>
+                            <option value="15" class="btn btn-secondary">15</option>
+                            <option value="25"  class="btn btn-secondary">25</option>
+                            <option value="50" class="btn btn-secondary">50</option>
+                            <option value="100" class="btn btn-secondary">100</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-boton-calcular">
+                    <button class="btn botones boton-calcular" onclick="mostrarColores()" id="btnGroupAddon">Calcular</button>
+                </div>
+            </div>
+            <div class="columnaImagenResistencia">
+                <table>
+                    <tr id="imagenes">
+                        <img src="imagenes/resistencias/h-h-bk.png" id="banda 1" class="img-fluid tabla-imagenes" alt="Responsive image">
+                        <img src="imagenes/resistencias/b-h-bk.png" id="banda 2" class="img-fluid tabla-imagenes" alt="Responsive image">
+                        <img src="imagenes/resistencias/b-h-bk.png" id="banda 3" class="img-fluid tabla-imagenes" alt="Responsive image">
+                        <img src="imagenes/resistencias/t-h-gd.png" id="banda 4" class="img-fluid tabla-imagenes" alt="Responsive image">
+                        <img src="imagenes/resistencias/null.png" id="banda 5" class="img-fluid tabla-imagenes" alt="Responsive image">
+                        <img src="imagenes/resistencias/null.png" id="banda 6" class="img-fluid tabla-imagenes" alt="Responsive image">
+                    </tr>
+                </table>
+                 <!-- Calculo -->
+                <div class="columnaCalcular">
+                    <label class="etiqueta-resultado2" id="nodo-calculo" disabled="True">
+                        0Ω Tolerancia:±5%
+                    </label>
+                </div>
+            </div>
+            <div class="historial">
+                <div class="columnaHistorial">
+                    <h1 class="titulo-historial">Historial</h1>
+                    <table>
+                        <tr><td class="titulo-input" id="historial1"></td></tr>
+                        <tr><td class="titulo-input" id="historial2"></td></tr>
+                        <tr><td class="titulo-input" id="historial3"></td></tr>
+                        <tr><td class="titulo-input" id="historial4"></td></tr>
+                        <tr><td class="titulo-input" id="historial5"></td></tr>
+                    </table>
+                </div>
+             </div>
+        </div>
+    </body>
+</html>
