@@ -94,6 +94,8 @@ body{
     margin-left: auto;
 }
 .boton-calcular{
+    margin-top: 15%;
+    margin-bottom: 5%;
     width: 100%;
 }
 
@@ -216,11 +218,18 @@ body{
     font-size: 20px;
 }
 .titulo-input{
-    margin-top: 25px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     font-size: 15px;
     font-weight: normal;
     font-style: italic;
+}
+.mensaje-alerta{
+    margin-top: 3px;
+    margin-left: 10%;
+    text-align: left;
+    font-size: 11px;
+    color: salmon;
 }
 
 
@@ -389,6 +398,11 @@ body{
 }
 .tabla-imagenes{
     margin-top: 40px;
+}
+
+/* Alerta */
+.alert-warning{
+    background-color: red;
 }
 
 

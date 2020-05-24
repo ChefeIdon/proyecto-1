@@ -149,6 +149,25 @@ var decimales = false;
 
 
 //---------------------------------------------------------Manejo de MOD--------------------------------------------
+
+/**
+ * Setea como visible al elemento de MOD que es pasado por parametro
+ * @param {*} id es el id del elemento a visualizar
+ */
+function mostrarAlerta(mensaje)
+{
+    document.getElementById("mensaje-alerta").innerHTML = mensaje;
+}
+
+/**
+ * Setea como visible al elemento de MOD que es pasado por parametro
+ */
+function ocultarAlerta()
+{
+    document.getElementById("mensaje-alerta").innerHTML = "";
+} 
+
+
 /**
  * Setea como visible al elemento de MOD que es pasado por parametro
  * @param {*} id es el id del elemento a visualizar
@@ -528,22 +547,24 @@ function mostrarColores()
             } 
             else
             {
-                alert("El valor ingresado no representable. Reingrese un valor correcto.");
+                var mensaje = "Valor ingresado no representable."
+                mostrarAlerta(mensaje);
             }
                         
         }
     }
     else
     {
-        alert("Ingrese un valor correcto.");
+        var mensaje = "Valor ingresado incorrecto."
+        mostrarAlerta(mensaje);
     }
 
     if(resultado != "error")
     {
+        ocultarAlerta();
         document.getElementById("nodo-calculo").innerHTML = resultado;
         actualizarHistorial(resultado);
-    }
-             
+    }        
 }
 
 /**
@@ -767,7 +788,8 @@ function chequearTeclaIngreso(elemento)
         {
             elemento.value = null;
             decimales = false;
-            alert("Valor ingresado no válido. Reingrese un valor correcto.");
+            var mensaje = "Valor ingresado no válido."
+            mostrarAlerta(mensaje);
         }
     } 
     else
@@ -776,7 +798,8 @@ function chequearTeclaIngreso(elemento)
         {
             elemento.value = null;
             decimales = false;
-            alert("No se permite la entrada de letras. Reingrese un valor correcto.");
+            var mensaje = "No se permite la entrada de letras."
+            mostrarAlerta(mensaje);
         }
     }
 }

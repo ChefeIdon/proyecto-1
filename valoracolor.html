@@ -51,13 +51,16 @@
             <div class="columnaIngresoDatos" id="ingreso-datos">
                 <h1 class="titulo-input">Valor de Resistencia</h1>
                 <div class="entrada">
-                    <input type="search" class="input-resistencia" oninput="chequearTeclaIngreso(this)" placeholder="Ω" aria-label="Input group example" aria-describedby="btnGroupAddon" title="Ingrese el valor de la resistencia" id="input-numero">
+                    <input type="text" class="input-resistencia" oninput="chequearTeclaIngreso(this)"  placeholder="Ω" aria-label="Input group example" aria-describedby="btnGroupAddon" title="Ingrese el valor de la resistencia" id="input-numero">
                     <select class="custom-select unidad" id="seleccion-multiplicador" title="Multiplicador">
                       <option value="1"  class="btn btn-secondary">Ω</option>
                       <option value="1000" class="btn btn-secondary">KΩ</option>
                       <option value="1000000" class="btn btn-secondary">MΩ</option>
                       <option value="1000000000" class="btn btn-secondary">GΩ</option>
                     </select>
+                    <div class="alerta" id="alerta">
+                        <h1 class="mensaje-alerta" id="mensaje-alerta"></h1>
+                    </div>
                 </div>
                 <div class="bandas">
                     <div class="selectores">
