@@ -417,13 +417,8 @@ function mostrarColores()
     //recuperamos el multiplicador elegido
     var mul = document.getElementById("seleccion-multiplicador").value;
     //calculamos el valor real de resistencia ingresado
-    ohms = ohms_in * mul;
-    //obtengo el valor (id) del multiplicador
-    /**
-     * 10^(n) = mul ==> log(mul) = n (;donde n es el valor correspondiente del color, Ej: 0:Negro, 1:Marrón, etc)
-     */
-    var banMul = Math.log10(mul);
-
+    ohms = ohms_in * (Math.pow(10,mul));
+   
     //Si no entra a ningun if, ocurrió un error (datos invalidos de entrada o datos ingresados no representables)
     var resultado = "error";
 
@@ -456,16 +451,17 @@ function mostrarColores()
             if(aux < 1)
             {
                 aux = aux * 100;
-                mul = 0.01;
+                mul = -2;
             }
             else
             {
                 if(aux < 10)
                 {
                     aux = aux * 10;
-                    mul = 0.1;
+                    mul = -1;
                 }
             }
+
             //Obtenemos el valor de cada banda por separado
             banda1 = Math.trunc(aux / 10);
             banda2 = Math.trunc(aux % 10);
@@ -473,10 +469,15 @@ function mostrarColores()
             //Obtenemos los colores correspondientes y seteamos las imagenes
             document.getElementById("banda 1").src = codificarColor("h","col",banda1+"");
             document.getElementById("banda 2").src = codificarColor("b","col",banda2+"");
-            document.getElementById("banda 3").src = codificarColor("b","mul",banMul+"");
+            document.getElementById("banda 3").src = codificarColor("b","mul",mul+"");
             document.getElementById("banda 4").src = codificarColor("t","tol",tol);
             document.getElementById("banda 5").src = "imagenes/resistencias/null.png";
             document.getElementById("banda 6").src = "imagenes/resistencias/null.png";
+
+            //cambiamos el formato de muestra del valor ingresado
+            //"b1b2 x mul" ;donde b1=banda de color1, b2=banda de color 2, mul=10emul
+            ohms = banda1*10 + banda2;
+            ohms = ohms + "x"+(Math.pow(10,mul));
 
             resultado = ohms+"Ω Tolerancia: ±"+tol;
         }
@@ -502,22 +503,28 @@ function mostrarColores()
                 {
                     aux = aux * 100;
                     banda1 = 0;
-                    mul = 0.01;
+                    mul = -2;
                 }
                 else
                 {
                     if(aux < 100)
                     {
                         aux = aux * 10;
-                        mul = 0.1;   
+                        mul = -1;   
                     }
                 }
-
+        
                 //Obtenemos el valor de cada banda por separado
                 banda1 = Math.trunc(aux / 100);
                 aux = Math.trunc(aux % 100);
                 banda2 = Math.trunc(aux / 10);
                 banda3 = Math.trunc(aux % 10);
+
+                //cambiamos el formato de muestra del valor ingresado
+                //"b1b2b3 x mul" ;donde b1=banda de color1, b2=banda de color 2, b3=banda de color 3, mul=10emul
+                ohms = banda1*100 + banda2*10 + banda3;
+                ohms = ohms + "x"+(Math.pow(10,mul));
+
                 if(ppm_in == 0)
                 {
                     //5 Bandas
@@ -525,7 +532,7 @@ function mostrarColores()
                     document.getElementById("banda 1").src = codificarColor("h","col",banda1+"");
                     document.getElementById("banda 2").src = codificarColor("b","col",banda2+"");
                     document.getElementById("banda 3").src = codificarColor("b","col",banda3+"");
-                    document.getElementById("banda 4").src = codificarColor("b","mul",banMul+"");
+                    document.getElementById("banda 4").src = codificarColor("b","mul",mul+"");
                     document.getElementById("banda 5").src = codificarColor("t","tol",tol);
                     document.getElementById("banda 6").src = "imagenes/resistencias/null.png";
 
@@ -538,7 +545,7 @@ function mostrarColores()
                     document.getElementById("banda 1").src = codificarColor("h","col",banda1+"");
                     document.getElementById("banda 2").src = codificarColor("b","col",banda2+"");
                     document.getElementById("banda 3").src = codificarColor("b","col",banda3+"");
-                    document.getElementById("banda 4").src = codificarColor("b","mul",banMul+"");
+                    document.getElementById("banda 4").src = codificarColor("b","mul",mul+"");
                     document.getElementById("banda 5").src = codificarColor("b","tol",tol);
                     document.getElementById("banda 6").src = codificarColor("t","ppm",ppm_in);
 
@@ -584,18 +591,7 @@ function codificarColor(modo, tipo, valor)
             break;
 
         case '1':
-            switch(tipo)
-            {
-                case "col":
-                    codigo += "br";
-                    break;
-                case "mul":
-                    codigo += "bk";
-                    break;
-                case "tol":
-                    codigo += "br";
-                    break;
-            }
+            codigo += "br";
             break;
 
         case '2':
@@ -612,17 +608,20 @@ function codificarColor(modo, tipo, valor)
         
         case '5':
         {
-            switch(tipo)
+            if (tipo == "ppm")
             {
-                case "col":
-                    codigo += "gn";
-                    break;
-                case "tol":
+                codigo += "pk";
+            } 
+            else 
+            {
+                if (tipo == "tol")
+                {
                     codigo += "gd";
-                    break;
-                case "ppm":
-                    codigo += "pk";
-                    break;
+                }
+                else
+                {
+                    codigo += "gn";
+                }
             }
             break;
         }
