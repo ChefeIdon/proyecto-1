@@ -1,8 +1,18 @@
-Calculadora de Resistencias de Color a Valor
+# **Calculadora de Resistencias de Color a Valor**
 
-Esta herramienta se utiliza para decodificar información para las resistencias con conductores axiales en una banda de colores.Se debe seleccionar la cantidad de bandas y, luego, sus colores para determinar el valor y la tolerancia de las resistencias.
+Esta herramienta se utiliza para decodificar información para las resistencias con conductores axiales en una banda de colores.
+En ella encontrará las opciones de transformar un código de colores determinado en su valor correspondiente de resistencia, asi como tambien, dado un valor determinado de resistencia, poder encontrar la codificación de colores correspondiente.
 
-Cabe aclarar que la idea estaba en hacer la funcionalidad inversa (recibir un valor de resistencia y retornar el código de colores corresponiente). Esta funcionalidad estaba en pleno proceso pero me acaban de avisar que el proyecto se entregaba hoy 14 de Mayo incusive, cuando (por error mio) yo contaba con el dia de mañana para terminarla y dejarla lista. No se en que momento tome como que la entrega era el 15 de Mayo. Pido perdón por el error y si puedo re-entregarlo completo creo que seria lo mejor.
+## **Funcionalidades**
+### Convertir un valor de resistencia dado en su correspondiente código de colores
+Esta función permite determinar el código de colores correspondiente a un cierto valor de resistencia ingresado.
+Indique el valor de resistencia deseado, su escala, la tolerancia deseada y su valor de PPM (en caso de ser una resistencia de 6 bandas).
 
+### Convertir un código de colores de resistencia dado en su correspondiente valor en ohms
+Esta función permite seleccionar una codificación de colores determinada para luego calcular su valor de resistencia.
+Seleccione la cantidad de bandas y, luego, sus colores para determinar el valor y la tolerancia de las resistencias.
 
-Link del video explicativo: https://youtu.be/rSwIGb-yboU
+## **Aclaraciones y Correcciones**
+Todas las aclaraciones,consideraciones y correcciones, asi como también las funcionalidades de la página están en el video explicativo el cual se encuentra en el enlace a continuación:
+
+**Link del video explicativo:** https://youtu.be/SKsXtPsP3SU
