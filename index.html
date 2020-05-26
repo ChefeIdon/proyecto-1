@@ -1,18 +1,82 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/app.css">
+        <!--  CSS Personal -->
+        <link rel="stylesheet" href="css/app.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        
+        
+    </head>
 
-    <title>Proyecto 1</title>
-  </head>
-  <body>
-    <h1>Proyecto 1</h1>
+    <script type ="text/javascript" src="js/app.js"></script>
 
-    <!-- JavaScript -->
-    <script src="js/app.js"></script>
+    <body class="fondo">
+        <!--Barra superior-->
+        <div class = "barra fixed-top" id="barra">
+            <a class=" boton-barra" href="index.html" role="button">
+                <button class=" boton-barra">
+                    <img class="rounded logo25x25" src="imagenes/logoMin25x25.png"></img>
+                </button>
+            </a>
+            <a class=" boton-barra" href="valoracolor.html" role="button">
+                <button class=" boton-barra">
+                    De Valor a Colores
+                </button>
+            </a>
+            <a class=" boton-barra" href="coloravalor.html" role="button">
+                <button class="boton-barra">
+                    De Colores a Valor
+                </button>
+            </a>
+        </div>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Principal</li>
+            </ol>
+        </nav>
+
+        <div class="bandas">
+            <div class="logo">
+                <img class="max-width logo-ppal" src="imagenes/logoMin.png"></img>
+            </div>
+            <div class="historia">
+                <h1 class="titulo-ppal">Mr. Omegoo</h1>
+                <h1 class="subtitulo">Ω Calculadora de Resistencias</h1>
+                <h1 class="parrafo"> Esta herramienta se utiliza para decodificar información para las resistencias con conductores axiales en una banda de colores.</h1>
+                <h1 class="parrafo"> En ella encontrará las opciones de transformar un código de colores determinado en su valor correspondiente de resistencia, asi como tambien, dado un valor determinado de resistencia, poder encontrar la codificación de colores correspondiente.</h1>
+            </div>
+        </div>
+
+        <div class="bandas">
+            <div class="logo">
+                <a href="valoracolor.html" role="button">
+                    <img class="max-width logos-inicio" src="imagenes/val a col.png"></img>
+                </a>
+            </div>
+            <div class="historia-sec">
+                <h1 class="subtitulo">Calcular los colores a partir de un valor</h1>
+                <h1 class="parrafo"> Esta función permite determinar el código de colores correspondiente a un cierto valor de resistencia ingresado.</h1>
+                <h1 class="parrafo"> Indique el valor de resistencia deseado, su escala, la tolerancia deseada y su valor de PPM (en caso de ser una resistencia de 6 bandas).</h1>
+            </div>
+        </div>
+
+        <div class="bandas">
+            <div class="historia-sec">
+                <h1 class="subtitulo-der">Calcular el valor a partir de un código de colores</h1>
+                <h1 class="parrafo-der"> Esta función permite seleccionar una codificación de colores determinada para luego calcular su valor de resistencia.</h1>
+                <h1 class="parrafo-der"> Seleccione la cantidad de bandas y, luego, sus colores para determinar el valor y la tolerancia de las resistencias.</h1>
+            </div>
+            <div class="logo">
+                <a href="coloravalor.html" role="button">
+                    <img class="max-width logos-inicio" src="imagenes/col a val.png"></img>
+                </a>
+            </div>
+        </div>
   </body>
 </html>

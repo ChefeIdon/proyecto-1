@@ -1,0 +1,360 @@
+<!doctype html>
+  <html lang="es">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+      <link rel="stylesheet" href="css/app.css"> 
+      <link rel="stylesheet" href="css/bootstrap.css">
+  
+      <!--Barra superior-->
+      <div class = "barra fixed-top" id="barra">
+        <a class="boton-barra" href="index.html" role="button">
+            <button class="boton-barra">
+                <img class="rounded logo25x25" src="imagenes/logoMin25x25.png"></img>
+            </button>
+        </a>
+        <a class="boton-barra" href="valoracolor.html" role="button">
+            <button class="boton-barra">
+                De Valor a Colores
+            </button>
+        </a>
+        <a class="boton-barra" ref="coloravalor.html" role="button">
+            <button class="boton-barra" onclick="inicializarResistencia(this.value)" value="4">
+                De Colores a Valor
+            </button>
+        </a>
+      </div>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="link" href="index.html">Principal</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Calculadora de Color a Valor</li>
+        </ol>
+      </nav>
+
+      <div class="logo-sec">
+          <img class="logo70x70" src="imagenes/LogoMin70x70.png"></img>
+          <h1 class="titulo">Mr. Omegoo</h1>
+          <h1 class="subtitulo">Ω Calculadora de Valor a Color</h1>
+          <h1 class="parrafo"> Esta función permite seleccionar una codificación de colores determinada para luego calcular su valor de resistencia.</h1>
+          <h1 class="parrafo"> Seleccione la cantidad de bandas y, luego, sus colores para determinar el valor y la tolerancia de las resistencias.</h1>
+      </div>
+      
+    </head>
+
+    <script type ="text/javascript" src="js/app.js"></script>
+
+    <body class="fondo" onload="inicializarResistencia('4')">   
+
+        <div class="fila-cantidad-bandas" id="contenedor-bandas">
+          <h1 class="titulo-numero-bandas">Cantidad de Bandas</h1>
+          <button class="btn botones boton-bandas" onclick="inicializarResistencia(this.value)" role="button" value="4">4 bandas</button>
+          <button class="btn botones boton-bandas" onclick="inicializarResistencia(this.value)" role="button" value="5">5 bandas</button>
+          <button class="btn botones boton-bandas" onclick="inicializarResistencia(this.value)" role="button" value="6">6 bandas</button>
+        </div>
+      
+        <div class="contenedor-body" id="color-a-valor">
+          <div class="fila" id="fila1" >
+              <div class="paleta" id="paleta1">
+                <h1 class="titulo_paleta">1er Banda de Color</h1>
+                <table class="paleta-color">
+                  <tr>
+                    <td>
+                      <img src="imagenes/colores/pal-bk.png" onclick="seleccionarColor(this)" alt="" id="h-v-bk-col-v-0" title="Negro">
+                      <h1 class="descripcion_paleta">0</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-br.png" onclick="seleccionarColor(this)" alt="" id="h-v-br-col-v-0" title="Marrón">
+                      <h1 class="descripcion_paleta">1</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-rd.png" onclick="seleccionarColor(this)" alt="" id="h-v-rd-col-v-0" title="Rojo">
+                      <h1 class="descripcion_paleta">2</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-or.png" onclick="seleccionarColor(this)" alt="" id="h-v-or-col-v-0" title="Naranja">
+                      <h1 class="descripcion_paleta">3</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-yw.png" onclick="seleccionarColor(this)" alt="" id="h-v-yw-col-v-0" title="Amarillo">
+                      <h1 class="descripcion_paleta">4</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gn.png" onclick="seleccionarColor(this)" alt="" id="h-v-gn-col-v-0" title="Verde">
+                      <h1 class="descripcion_paleta">5</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-bl.png" onclick="seleccionarColor(this)" alt="" id="h-v-bl-col-v-0" title="Azul">
+                      <h1 class="descripcion_paleta">6</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-pk.png" onclick="seleccionarColor(this)" alt="" id="h-v-pk-col-v-0" title="Violeta">
+                      <h1 class="descripcion_paleta">7</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gr.png" onclick="seleccionarColor(this)" alt="" id="h-v-gr-col-v-0" title="Gris">
+                      <h1 class="descripcion_paleta">8</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-wt.png" onclick="seleccionarColor(this)" alt="" id="h-v-wt-col-v-0" title="Blanco">
+                      <h1 class="descripcion_paleta">9</h1>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="columnaImagen" id="imagen1">
+                <img alt="" id="v-0">
+              </div>
+          </div>
+          <div class="fila" id="fila2">
+              <div class="paleta" id="paleta2">
+                <h1 class="titulo_paleta">2da Banda de Color</h1>
+                <table class="paleta-color">
+                  <tr>
+                    <td>
+                      <img src="imagenes/colores/pal-bk.png" onclick="seleccionarColor(this)" alt="" id="b-v-bk-col-v-1" title="Negro">
+                      <h1 class="descripcion_paleta">0</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-br.png" onclick="seleccionarColor(this)" alt="" id="b-v-br-col-v-1" title="Marrón">
+                      <h1 class="descripcion_paleta">1</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-rd.png" onclick="seleccionarColor(this)" alt="" id="b-v-rd-col-v-1" title="Rojo">
+                      <h1 class="descripcion_paleta">2</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-or.png" onclick="seleccionarColor(this)" alt="" id="b-v-or-col-v-1" title="Naranja">
+                      <h1 class="descripcion_paleta">3</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-yw.png" onclick="seleccionarColor(this)" alt="" id="b-v-yw-col-v-1" title="Amarillo">
+                      <h1 class="descripcion_paleta">4</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gn.png" onclick="seleccionarColor(this)" alt="" id="b-v-gn-col-v-1" title="Verde">
+                      <h1 class="descripcion_paleta">5</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-bl.png" onclick="seleccionarColor(this)" alt="" id="b-v-bl-col-v-1" title="Azul">
+                      <h1 class="descripcion_paleta">6</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-pk.png" onclick="seleccionarColor(this)" alt="" id="b-v-pk-col-v-1" title="Violeta">
+                      <h1 class="descripcion_paleta">7</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gr.png" onclick="seleccionarColor(this)" alt="" id="b-v-gr-col-v-1" title="Gris">
+                      <h1 class="descripcion_paleta">8</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-wt.png" onclick="seleccionarColor(this)" alt="" id="b-v-wt-col-v-1" title="Blanco">
+                      <h1 class="descripcion_paleta">9</h1>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="columnaImagen" id="imagen2">
+                <img alt="" id="v-1">
+            </div>
+          </div>
+          <div class="fila" id="fila3">
+            <div class="paleta" id="paleta3">
+              <h1 class="titulo_paleta">3era Banda de Color</h1>
+              <table class="paleta-color">
+                <tr>
+                  <td>
+                    <img src="imagenes/colores/pal-bk.png" onclick="seleccionarColor(this)" alt="" id="b-v-bk-col-v-2" title="Negro">
+                    <h1 class="descripcion_paleta">0</h1>
+                  </td>
+                  <td>
+                    <img src="imagenes/colores/pal-br.png" onclick="seleccionarColor(this)" alt="" id="b-v-br-col-v-2" title="Marrón">
+                    <h1 class="descripcion_paleta">1</h1>
+                  </td>
+                  <td>
+                    <img src="imagenes/colores/pal-rd.png" onclick="seleccionarColor(this)" alt="" id="b-v-rd-col-v-2" title="Rojo">
+                    <h1 class="descripcion_paleta">2</h1>
+                  </td>
+                  <td>
+                    <img src="imagenes/colores/pal-or.png" onclick="seleccionarColor(this)" alt="" id="b-v-or-col-v-2" title="Naranja">
+                    <h1 class="descripcion_paleta">3</h1>
+                  </td>
+                  <td>
+                    <img src="imagenes/colores/pal-yw.png" onclick="seleccionarColor(this)" alt="" id="b-v-yw-col-v-2" title="Amarillo">
+                    <h1 class="descripcion_paleta">4</h1>
+                  </td>
+                  <td>
+                    <img src="imagenes/colores/pal-gn.png" onclick="seleccionarColor(this)" alt="" id="b-v-gn-col-v-2" title="Verde">
+                    <h1 class="descripcion_paleta">5</h1>
+                  </td>
+                  <td>
+                    <img src="imagenes/colores/pal-bl.png" onclick="seleccionarColor(this)" alt="" id="b-v-bl-col-v-2" title="Azul">
+                    <h1 class="descripcion_paleta">6</h1>
+                  </td>
+                  <td>
+                    <img src="imagenes/colores/pal-pk.png" onclick="seleccionarColor(this)" alt="" id="b-v-pk-col-v-2" title="Violeta">
+                    <h1 class="descripcion_paleta">7</h1>
+                  </td>
+                  <td>
+                    <img src="imagenes/colores/pal-gr.png" onclick="seleccionarColor(this)" alt="" id="b-v-gr-col-v-2" title="Gris">
+                    <h1 class="descripcion_paleta">8</h1>
+                  </td>
+                  <td>
+                    <img src="imagenes/colores/pal-wt.png" onclick="seleccionarColor(this)" alt="" id="b-v-wt-col-v-2" title="Blanco">
+                    <h1 class="descripcion_paleta">9</h1>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="columnaImagen" id="imagen3">
+              <img alt="" id="v-2">
+            </div>
+          </div>
+          <div class="fila" id="filaMul">
+            <div class="paleta" id="paleta4">
+              <h1 class="titulo_paleta">Multiplicador</h1>
+              <table class="paleta-color">
+                <tr>
+                    <td>
+                      <img src="imagenes/colores/pal-bk.png" onclick="seleccionarColor(this)" alt="" id="b-v-bk-mul-v-3" title="Negro">
+                      <h1 class="descripcion_paleta">x1Ω</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-br.png" onclick="seleccionarColor(this)" alt="" id="b-v-br-mul-v-3" title="Marrón">
+                      <h1 class="descripcion_paleta">x10Ω</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-rd.png" onclick="seleccionarColor(this)" alt="" id="b-v-rd-mul-v-3" title="Rojo">
+                      <h1 class="descripcion_paleta">x100Ω</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-or.png" onclick="seleccionarColor(this)" alt="" id="b-v-or-mul-v-3" title="Naranja">
+                      <h1 class="descripcion_paleta">x1KΩ</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-yw.png" onclick="seleccionarColor(this)" alt="" id="b-v-yw-mul-v-3" title="Amarillo">
+                      <h1 class="descripcion_paleta">x10KΩ</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gn.png" onclick="seleccionarColor(this)" alt="" id="b-v-gn-mul-v-3" title="Verde">
+                      <h1 class="descripcion_paleta">x100KΩ</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-bl.png" onclick="seleccionarColor(this)" alt="" id="b-v-bl-mul-v-3" title="Azul">
+                      <h1 class="descripcion_paleta">x1MΩ</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-pk.png" onclick="seleccionarColor(this)" alt="" id="b-v-pk-mul-v-3" title="Violeta">
+                      <h1 class="descripcion_paleta">x10MΩ</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gr.png" onclick="seleccionarColor(this)" alt="" id="b-v-gr-mul-v-3" title="Gris">
+                      <h1 class="descripcion_paleta">x100MΩ</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-wt.png" onclick="seleccionarColor(this)" alt="" id="b-v-wt-mul-v-3" title="Blanco">
+                      <h1 class="descripcion_paleta">x1GΩ</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gd.png" onclick="seleccionarColor(this)" alt="" id="b-v-gd-mul-v-3" title="Oro">
+                      <h1 class="descripcion_paleta">x0.1Ω</h1>
+                    </td>
+                    <td>
+                      <img src="imagenes/colores/pal-sv.png" onclick="seleccionarColor(this)" alt="" id="b-v-sv-mul-v-3" title="Plata">
+                      <h1 class="descripcion_paleta">x0.01Ω</h1>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+            <div class="columnaImagen" id="imagen4">
+              <img alt="" id="v-3">
+            </div>
+          </div>
+          <div class="fila" id="filaTol">
+            <div class="paleta" id="paleta5">
+              <h1 class="titulo_paleta">Tolerancia</h1>
+              <table class="paleta-color">
+                <tr>
+                    <td>
+                      <img src="imagenes/colores/pal-br.png" onclick="seleccionarColor(this)" alt="" id="x-v-br-tol-v-4" title="Marrón">
+                      <h1 class="descripcion_paleta">±1%</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-rd.png" onclick="seleccionarColor(this)" alt="" id="x-v-rd-tol-v-4" title="Rojo">
+                      <h1 class="descripcion_paleta">±2%</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gn.png" onclick="seleccionarColor(this)" alt="" id="x-v-gn-tol-v-4" title="Verde">
+                      <h1 class="descripcion_paleta">±0.5%</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-bl.png" onclick="seleccionarColor(this)" alt="" id="x-v-bl-tol-v-4" title="Azul">
+                      <h1 class="descripcion_paleta">±0.25%</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-pk.png" onclick="seleccionarColor(this)" alt="" id="x-v-pk-tol-v-4" title="Violeta">
+                      <h1 class="descripcion_paleta">±0.1%</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gr.png" onclick="seleccionarColor(this)" alt="" id="x-v-gr-tol-v-4" title="Gris">
+                      <h1 class="descripcion_paleta">±0.05%</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-gd.png" onclick="seleccionarColor(this)" alt="" id="x-v-gd-tol-v-4" title="Oro">
+                      <h1 class="descripcion_paleta">±5%</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-sv.png" onclick="seleccionarColor(this)" alt="" id="x-v-sv-tol-v-4" title="Plata">
+                      <h1 class="descripcion_paleta">±10%</h1>
+                  </td>
+                  </tr>
+                </table>
+            </div>
+            <div class="columnaImagen" id="imagen5">
+              <img alt="" id="v-4">
+            </div>
+          </div>
+          <div class="fila" id="filaPpm">
+            <div class="paleta" id="paleta6">
+              <h1 class="titulo_paleta">PPM</h1>
+              <table class="paleta-color">
+                <tr>
+                    <td>
+                      <img src="imagenes/colores/pal-br.png" onclick="seleccionarColor(this)" alt="" id="t-v-br-ppm-v-5" title="Marrón">
+                      <h1 class="descripcion_paleta">100</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-rd.png" onclick="seleccionarColor(this)" alt="" id="t-v-rd-ppm-v-5" title="Rojo">
+                      <h1 class="descripcion_paleta">50</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-or.png" onclick="seleccionarColor(this)" alt="" id="t-v-or-ppm-v-5" title="Naranja">
+                      <h1 class="descripcion_paleta">15</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-yw.png" onclick="seleccionarColor(this)" alt="" id="t-v-yw-ppm-v-5" title="Amarillo">
+                      <h1 class="descripcion_paleta">25</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-bl.png" onclick="seleccionarColor(this)" alt="" id="t-v-bl-ppm-v-5" title="Azul">
+                      <h1 class="descripcion_paleta">10</h1>
+                  </td>
+                    <td>
+                      <img src="imagenes/colores/pal-pk.png" onclick="seleccionarColor(this)" alt="" id="t-v-pk-ppm-v-5" title="Violeta">
+                      <h1 class="descripcion_paleta">5</h1>
+                  </td>
+                </tr>
+                </table>
+            </div>
+            <div class="columnaImagen" class="fila" id="imagen6">
+              <img alt="" id="v-5">
+            </div>
+          </div>
+        </div>
+        <div class="columnaCalcular fixed-bottom" id="contenedor-resultado">
+          <label class="etiqueta-resultado" for="" id="label-resultado"></label>
+        </div>
+      
+  </body>
+</html>
