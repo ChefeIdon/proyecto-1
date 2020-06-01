@@ -142,7 +142,7 @@ mapValores.set("sv-tol",10);
     el localStorage
 */
 var pos = 0;
-var cant = 0;
+var cant = localStorage.length;
 
 // Se usa para verificar el caso de ingresar dos o más veces el punto (Ej: 12.34.5)
 var decimales = false;
@@ -570,7 +570,7 @@ function mostrarColores()
     {
         ocultarAlerta();
         document.getElementById("nodo-calculo").innerHTML = resultado;
-        actualizarHistorial(resultado);
+        insertarHistorial(resultado);
     }        
 }
 
@@ -805,13 +805,11 @@ function chequearTeclaIngreso(elemento)
 
 /**
  * Almacena el ultimo resultado exitoso dentro de los datos del ususario en el navegador (localStorage)
- * y actualiza la lista de los 5 últimos resultados exitosos mostrados
- * @param {*} resultado es el último resultado exitoso mostrado
+ * y llama a actualizar el historial
+ * @param {*} resultado es el resultado exitoso a agregar al histotrial
  */
-function actualizarHistorial(resultado)
+function insertarHistorial(resultado)
 {
-    var celda;
-    
     //Almaceno el resultado en los datos del usuario
     if(cant < 5)
     {
@@ -825,8 +823,17 @@ function actualizarHistorial(resultado)
         localStorage.setItem(pos, resultado);
         pos = (pos + 1) % 5;        
     }
-    
-    for (let index = 0; index < cant; index++)
+    actualizarHistorial();
+}
+
+/**
+ * Actualiza la lista de los 5 últimos resultados exitosos mostrados
+ */
+function actualizarHistorial()
+{
+    var celda;
+        
+    for (let index = 0; index < localStorage.length; index++)
     {
         celda = "historial"+(index+1);
         document.getElementById(celda).innerText = localStorage.getItem(index);        
